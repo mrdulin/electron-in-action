@@ -1,16 +1,10 @@
 const electorn = require('electron');
-const path = require('path');
+const { Sample } = require('./samples');
 
-function createWindow() {
-  let win = new electorn.BrowserWindow({ width: 800, height: 600 });
-  win.loadFile(path.resolve(__dirname, './index.html'));
-  win.webContents.openDevTools();
-  win.on('closed', () => {
-    win = null;
-  });
-}
-
-electorn.app.on('ready', createWindow);
+electorn.app.on('ready', () => {
+  Sample.createWindow();
+  Sample.shortcut();
+});
 electorn.app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     electorn.app.quit();
