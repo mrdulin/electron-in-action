@@ -1,3 +1,0 @@
-calculate.sh
-out.txt
-temp.txt
