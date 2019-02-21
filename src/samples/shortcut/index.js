@@ -1,11 +1,9 @@
 const { globalShortcut } = require('electron');
 
-function shortcut() {
-  globalShortcut.register('Command+C', copyHandler);
-}
+const GlobalShortcut = {
+  register(accelerator, callback) {
+    globalShortcut.register(accelerator, callback);
+  }
+};
 
-function copyHandler() {
-  console.log('Command + C pressed');
-}
-
-module.exports = shortcut;
+module.exports = GlobalShortcut;

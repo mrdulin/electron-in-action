@@ -8,6 +8,7 @@ function createWindow() {
   win.on('closed', () => {
     win = null;
   });
+  return win;
 }
 
 module.exports = createWindow;

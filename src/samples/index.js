@@ -1,6 +1,7 @@
 const Sample = {
-  shortcut: require('./shortcut'),
-  createWindow: require('./createWindow')
+  globalShortcut: require('./shortcut'),
+  createWindow: require('./createWindow'),
+  clipboard: require('./clipboard')
 };
 
 module.exports = { Sample };
